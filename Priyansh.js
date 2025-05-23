@@ -403,7 +403,7 @@ cron.schedule('0 1 16 * * *', () => {
   timezone: "Asia/Kolkata"
 });
 cron.schedule('0 1 18 * * *', () => {
-  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
+  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => 
     if (err) return console.log("ERR: "+err);
     list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("Good evening 🌆 guys, How's your day ✨", now.threadID) : '');
   });
