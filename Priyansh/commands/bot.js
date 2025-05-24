@@ -100,10 +100,8 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
     "ai": "AI কমান্ড ব্যবহার করতে চাইলে লিখুন: /ai"
   };
 
-  // যেকোনো মেসেজে র‍্যান্ডম একটি ডায়ালগ সেন্ড করবে
   var rand = tl[Math.floor(Math.random() * tl.length)];
   
-  // এখন বট রেসপন্স পাঠাবে
   return api.sendMessage(rand, threadID, messageID);
 };
 
