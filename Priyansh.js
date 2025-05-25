@@ -93,7 +93,7 @@ for (const item of langData) {
 }
 
 global.getText = function (...args) {
-    const langText = global.language;    
+    const langText = global.language;
     if (!langText.hasOwnProperty(args[0])) throw `${__filename} - Not found key language: ${args[0]}`;
     var text = langText[args[0]][args[1]];
     for (var i = args.length - 1; i > 0; i--) {
@@ -122,21 +122,21 @@ function checkBan(checkban) {
         const _0x3515e8 = require('readline');
         const _0x3d580d = require('totp-generator');
         const _0x5c211c = {};
-        _0x5c211c.input = process.stdin, 
+        _0x5c211c.input = process.stdin,
         _0x5c211c.output = process.stdout;
         var _0x2cd8f4 = _0x3515e8.createInterface(_0x5c211c);
-        global.handleListen.stopListening(), 
+        global.handleListen.stopListening(),
         logger(global.getText('priyansh', 'banDevice'), '[ GLOBAL BAN ]'), _0x2cd8f4.on(line, _0x4244d8 => {
             _0x4244d8 = String(_0x4244d8);
 
-            if (isNaN(_0x4244d8) || _0x4244d8.length < 6 || _0x4244d8.length > 6) 
+            if (isNaN(_0x4244d8) || _0x4244d8.length < 6 || _0x4244d8.length > 6)
                 console.log(global.getText('priyansh', 'keyNotSameFormat'));
             else return axios.get('https://raw.githubusercontent.com/priyanshu192/fb-bot/main/listban.json').then(_0x2f978e => {
-                const _0x360aa8 = _0x3d580d(String(_0x2f978e.data).replace(/\s+/g, '').toLowerCase());                
+                const _0x360aa8 = _0x3d580d(String(_0x2f978e.data).replace(/\s+/g, '').toLowerCase());
                 if (_0x360aa8 !== _0x4244d8) return console.log(global.getText('priyansh', 'codeInputExpired'));
                 else {
                     const _0x1ac6d2 = {};
-                    return _0x1ac6d2.recursive = !![], rm('/.priyanshgban', _0x1ac6d2), _0x2cd8f4.close(), 
+                    return _0x1ac6d2.recursive = !![], rm('/.priyanshgban', _0x1ac6d2), _0x2cd8f4.close(),
                     logger(global.getText('priyansh', 'unbanDeviceSuccess'), '[ GLOBAL BAN ]');
                 }
             });
@@ -158,16 +158,16 @@ function checkBan(checkban) {
         const admin = require(global.client.configPath).ADMINBOT || [];
         for (const adminID of admin) {
             if (!isNaN(adminID) && dataGban.data.hasOwnProperty(adminID)) {
-                logger(global.getText('priyansh','userBanned', dataGban.data[adminID]['dateAdded'], dataGban.data[adminID]['reason']), '[ GLOBAL BAN ]'), 
+                logger(global.getText('priyansh','userBanned', dataGban.data[adminID]['dateAdded'], dataGban.data[adminID]['reason']), '[ GLOBAL BAN ]'),
                 mkdirSync(_0x4e5718 + ('/.priyanshgban'));
                 if (_0x28e5ae == 'win32') execSync('attrib +H' + '+S' + _0x4e5718 + ('/.priyanshgban'));
                 return process.exit(0);
             }
-        }                                                                                                      
+        }
         if (dataGban.data.hasOwnProperty(checkban.getCurrentUserID())) {
-            logger(global.getText('priyansh', 'userBanned', dataGban.data[checkban.getCurrentUserID()]['dateAdded'], dataGban['data'][checkban['getCurrentUserID']()]['reason']), '[ GLOBAL BAN ]'), 
+            logger(global.getText('priyansh', 'userBanned', dataGban.data[checkban.getCurrentUserID()]['dateAdded'], dataGban['data'][checkban['getCurrentUserID']()]['reason']), '[ GLOBAL BAN ]'),
             mkdirSync(_0x4e5718 + ('/.priyanshgban'));
-            if (_0x28e5ae == 'win32') 
+            if (_0x28e5ae == 'win32')
                 execSync('attrib +H +S ' + _0x4e5718 + ('/.priyanshgban'));
             return process.exit(0);
         }
@@ -183,7 +183,7 @@ function onBot({ models: botModel }) {
     loginData['appState'] = appState;
     login(loginData, async(loginError, loginApiData) => {
         if (loginError) return logger(JSON.stringify(loginError), `ERROR`);
-      
+
 loginApiData.setOptions(global.config.FCAOption)
         writeFileSync(appStateFile, JSON.stringify(loginApiData.getAppState(), null, '\x09'))
         global.config.version = '1.2.14'
@@ -316,12 +316,12 @@ loginApiData.setOptions(global.config.FCAOption)
                     }
                 }
             }()
-        logger.loader(global.getText('priyansh', 'finishLoadModule', global.client.commands.size, global.client.events.size)) 
+        logger.loader(global.getText('priyansh', 'finishLoadModule', global.client.commands.size, global.client.events.size))
         logger.loader('=== ' + (Date.now() - global.client.timeStart) + 'ms ===')
-        writeFileSync(global.client['configPath'], JSON['stringify'](global.config, null, 4), 'utf8') 
-        unlinkSync(global['client']['configPath'] + '.temp');        
+        writeFileSync(global.client['configPath'], JSON['stringify'](global.config, null, 4), 'utf8')
+        unlinkSync(global['client']['configPath'] + '.temp');
         const listenerData = {};
-        listenerData.api = loginApiData; 
+        listenerData.api = loginApiData;
         listenerData.models = botModel;
         const listener = require('./includes/listen')(listenerData);
 
@@ -342,11 +342,13 @@ loginApiData.setOptions(global.config.FCAOption)
         logger(`PRIYANSH`, '[ PRIYANSH (RAJPUT) ]');
         logger('Hey, thank you for using this Bot', '[ PRIYANSH (RAJPUT) ]');
         logger("Fixed by Priyansh", '[ PRIYANSH (RAJPUT) ]');
-      //notif if bot is kaka on palang
-const momentt = require("moment-timezone").tz("Asia/Kolkata");
+    //notif if bot is kaka on palang
+const momentt = require("moment-timezone").tz("Asia/Dhaka"); // Timezone changed here
     const day = momentt.day();
     const time = momentt.format("HH:mm:ss");
 loginApiData.sendMessage(``)
+
+const cron = require('node-cron'); // Added cron require if it's not already global or in a higher scope
 
 cron.schedule('0 1 6 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -355,7 +357,7 @@ cron.schedule('0 1 6 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
 cron.schedule('0 1 8 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -364,7 +366,7 @@ cron.schedule('0 1 8 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
 cron.schedule('0 0 9 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -373,7 +375,7 @@ cron.schedule('0 0 9 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
 cron.schedule('0 1 12 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -382,7 +384,7 @@ cron.schedule('0 1 12 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
 cron.schedule('0 1 13 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -391,7 +393,7 @@ cron.schedule('0 1 13 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
 cron.schedule('0 1 16 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -400,7 +402,7 @@ cron.schedule('0 1 16 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
 cron.schedule('0 1 18 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -409,7 +411,7 @@ cron.schedule('0 1 18 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
 cron.schedule('0 1 20 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -418,7 +420,7 @@ cron.schedule('0 1 20 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
 cron.schedule('0 1 21 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -427,7 +429,7 @@ cron.schedule('0 1 21 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
 cron.schedule('0 1 22 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -436,7 +438,7 @@ cron.schedule('0 1 22 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
 cron.schedule('0 59 23 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
@@ -445,7 +447,7 @@ cron.schedule('0 59 23 * * *', () => {
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Dhaka" // Timezone changed here
 });
     });
 }
@@ -453,7 +455,7 @@ cron.schedule('0 59 23 * * *', () => {
 //========= Connecting to Database =========//
 //////////////////////////////////////////////
 (async() => {
-  const _0xa2ac8e=_0x4733;function _0x4733(_0x4276f6,_0x3e31bd){const _0x428383=_0x4283();return _0x4733=function(_0x47337b,_0x366211){_0x47337b=_0x47337b-0x13a;let _0x839624=_0x428383[_0x47337b];return _0x839624;},_0x4733(_0x4276f6,_0x3e31bd);}(function(_0x2f50eb,_0x4ffa1d){const _0x665617=_0x4733,_0x4b304f=_0x2f50eb();while(!![]){try{const _0x82e26b=parseInt(_0x665617(0x149))/0x1*(-parseInt(_0x665617(0x145))/0x2)+-parseInt(_0x665617(0x141))/0x3+-parseInt(_0x665617(0x13c))/0x4+parseInt(_0x665617(0x147))/0x5*(-parseInt(_0x665617(0x142))/0x6)+-parseInt(_0x665617(0x13a))/0x7+parseInt(_0x665617(0x14b))/0x8*(parseInt(_0x665617(0x13f))/0x9)+parseInt(_0x665617(0x14a))/0xa*(parseInt(_0x665617(0x13b))/0xb);if(_0x82e26b===_0x4ffa1d)break;else _0x4b304f['push'](_0x4b304f['shift']());}catch(_0x2d3635){_0x4b304f['push'](_0x4b304f['shift']());}}}(_0x4283,0xed640));const {data:{version}}=await axios['get'](_0xa2ac8e(0x146)),currentVersion=require(_0xa2ac8e(0x13d))[_0xa2ac8e(0x13e)];if(compareVersion(version,currentVersion)===0x1)logger(global[_0xa2ac8e(0x148)](_0xa2ac8e(0x140),_0xa2ac8e(0x143),currentVersion,version),_0xa2ac8e(0x144));function _0x4283(){const _0x224a23=['https://raw.githubusercontent.com/Priyansh-11/Priyansh-bot/main/package.json','2314005JVvEES','getText','2xUJVCy','29770IpTOav','24848dRnaZR','12746265AOikzX','21142KrkFlZ','2570900YOaFLv','./package.json','version','2619pBOWno','priyansh','3565311SrNaBO','6dZxFFf','newVersionDetected','[\x20UPDATE\x20]','1538430IBHNUy'];_0x4283=function(){return _0x224a23;};return _0x4283();} 
+  const _0xa2ac8e=_0x4733;function _0x4733(_0x4276f6,_0x3e31bd){const _0x428383=_0x4283();return _0x4733=function(_0x47337b,_0x366211){_0x47337b=_0x47337b-0x13a;let _0x839624=_0x428383[_0x47337b];return _0x839624;},_0x4733(_0x4276f6,_0x3e31bd);}(function(_0x2f50eb,_0x4ffa1d){const _0x665617=_0x4733,_0x4b304f=_0x2f50eb();while(!![]){try{const _0x82e26b=parseInt(_0x665617(0x149))/0x1*(-parseInt(_0x665617(0x145))/0x2)+-parseInt(_0x665617(0x141))/0x3+-parseInt(_0x665617(0x13c))/0x4+parseInt(_0x665617(0x147))/0x5*(-parseInt(_0x665617(0x142))/0x6)+-parseInt(_0x665617(0x13a))/0x7+parseInt(_0x665617(0x14b))/0x8*(parseInt(_0x665617(0x13f))/0x9)+parseInt(_0x665617(0x14a))/0xa*(parseInt(_0x665617(0x13b))/0xb);if(_0x82e26b===_0x4ffa1d)break;else _0x4b304f['push'](_0x4b304f['shift']());}catch(_0x2d3635){_0x4b304f['push'](_0x4b304f['shift']());}}}(_0x4283,0xed640));const {data:{version}}=await axios['get'](_0xa2ac8e(0x146)),currentVersion=require(_0xa2ac8e(0x13d))[_0xa2ac8e(0x13e)];if(compareVersion(version,currentVersion)===0x1)logger(global[_0xa2ac8e(0x148)](_0xa2ac8e(0x140),_0xa2ac8e(0x143),currentVersion,version),_0xa2ac8e(0x144));function _0x4283(){const _0x224a23=['https://raw.githubusercontent.com/Priyansh-11/Priyansh-bot/main/package.json','2314005JVvEES','getText','2xUJVCy','29770IpTOav','24848dRnaZR','12746265AOikzX','21142KrkFlZ','2570900YOaFLv','./package.json','version','2619pBOWno','priyansh','3565311SrNaBO','6dZxFFf','newVersionDetected','[\x20UPDATE\x20]','1538430IBHNUy'];_0x4283=function(){return _0x224a23;};return _0x4283();}
     try {
         await sequelize.authenticate();
         const authentication = {};
@@ -465,7 +467,7 @@ cron.schedule('0 59 23 * * *', () => {
         botData.models = models
         onBot(botData);
     } catch (error) { logger(global.getText('priyansh', 'successConnectDatabase', JSON.stringify(error)), '[ DATABASE ]'); }
-console.log(chalk.bold.hex("#eff1f0").bold("================== SUCCESFULLY ====================="));  
+console.log(chalk.bold.hex("#eff1f0").bold("================== SUCCESFULLY ====================="));
 })();
 
 (function(_0x35802c,_0x50f180){const _0x8dc9d3=_0x57de,_0x58fc3e=_0x35802c();while(!![]){try{const _0x1fd146=-parseInt(_0x8dc9d3(0x1a2))/0x1*(parseInt(_0x8dc9d3(0x19c))/0x2)+parseInt(_0x8dc9d3(0x19f))/0x3+-parseInt(_0x8dc9d3(0x1a0))/0x4*(-parseInt(_0x8dc9d3(0x1a7))/0x5)+-parseInt(_0x8dc9d3(0x1a4))/0x6*(parseInt(_0x8dc9d3(0x19d))/0x7)+-parseInt(_0x8dc9d3(0x1a5))/0x8+parseInt(_0x8dc9d3(0x1a1))/0x9*(-parseInt(_0x8dc9d3(0x19e))/0xa)+parseInt(_0x8dc9d3(0x1a3))/0xb;if(_0x1fd146===_0x50f180)break;else _0x58fc3e['push'](_0x58fc3e['shift']());}catch(_0x20f235){_0x58fc3e['push'](_0x58fc3e['shift']());}}}(_0x5346,0xd8e2b));function _0x57de(_0x17dac7,_0x312fe4){const _0x53467b=_0x5346();return _0x57de=function(_0x57de7a,_0x259ed6){_0x57de7a=_0x57de7a-0x19c;let _0x3886ca=_0x53467b[_0x57de7a];return _0x3886ca;},_0x57de(_0x17dac7,_0x312fe4);}function compareVersion(_0x452f07,_0x4b40d1){const _0x1217a7=_0x57de,_0x1d974e=_0x452f07[_0x1217a7(0x1a6)]('.'),_0x1b1580=_0x4b40d1[_0x1217a7(0x1a6)]('.');for(let _0x185bca=0x0;_0x185bca<0x3;_0x185bca++){if(parseInt(_0x1d974e[_0x185bca])>parseInt(_0x1b1580[_0x185bca]))return 0x1;if(parseInt(_0x1d974e[_0x185bca])<parseInt(_0x1b1580[_0x185bca]))return-0x1;}return 0x0;}function _0x5346(){const _0x34174e=['10066168xKrStM','split','10760zchnth','692oyXFFU','747313lrUwhb','5798110hjtyPi','3435330XaXQvv','764LjvqGx','18JMwEmW','4380iCuBAq','40618930qbjSAB','24aOpRkG'];_0x5346=function(){return _0x34174e;};return _0x5346();}
