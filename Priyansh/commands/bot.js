@@ -21,31 +21,31 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   var rand = tl[Math.floor(Math.random() * tl.length)]
 
     if ((event.body.toLowerCase() == "MISS YOU") || (event.body.toLowerCase() == "miss you")) {
-     return api.sendMessage("<আমি তোমাকে রাইতে মিস খাই🥹🤖👅/👅-✘  🎀 🍒:))", threadID);
+     return api.sendMessage("<আমি তোমাকে রাইতে মিস করি🥹🤖👅/👅-✘  🎀 🍒:))", threadID);
    };
 
-    if ((event.body.toLowerCase() == "😘") || (event.body.toLowerCase() == "😽")) {
+    if ((event.body.toLowerCase() == "😘") || (event.body.toLowerCase() == "ummmah") || (event.body.toLowerCase() == "😽")) {
      return api.sendMessage("কিস দিস না তোর মুখে দূর গন্ধ কয়দিন ধরে দাঁত ব্রাশ করিস নাই🤬", threadID);
    };
    
     if ((event.body.toLowerCase() == "👍🏼") || (event.body.toLowerCase() == "👍")) {
-     return api.sendMessage("সর এখান থেকে লাইকার আবাল..!🐸🤣👍⛏️", threadID);
+     return api.sendMessage("সর এখান থেকে লাইকার আবাল..!🐸🤣লাইক না দিয়া আমার বস রাকিবের সাথে কথা বলো👍⛏️", threadID);
    };
   
-   if ((event.body.toLowerCase() == "sim") || (event.body.toLowerCase() == "simsimi")) {
-     return api.sendMessage("Prefix Kya Tera Bap LagaYega? Pehle Prefix Laga Fir Likh Sim", threadID);
+   if ((event.body.toLowerCase() == "Kita koro") || (event.body.toLowerCase() == "ki koro")) {
+     return api.sendMessage("আর কিতা করতাম বইয়া বইয়া তুমার কথা ছিন্তা কররাম🤩", threadID);
    };
   
-   if ((event.body.toLowerCase() == "...") || (event.body.toLowerCase() == "...") ||(event.body.toLowerCase() == "...") || (event.body.toLowerCase() == "...")) {
+   if ((event.body.toLowerCase() == "Hi") || (event.body.toLowerCase() == "Hello") ||(event.body.toLowerCase() == "হাই") || (event.body.toLowerCase() == "hay")) {
      return api.sendMessage("এত হাই-হ্যালো চুদাছ কেনো বোকাচোদা..!🍆⛏️🐸🤣", threadID);
    };
 
    if ((event.body.toLowerCase() == "bc") || (event.body.toLowerCase() == "mc")) {
-     return api.sendMessage("SAME TO YOU😊 ", threadID);
+     return api.sendMessage("BC kita buji nai, acca tar poro same tumi😊 ", threadID);
    };
 
-   if ((event.body.toLowerCase() == "pro") || (event.body.toLowerCase() == "lol")) {
-     return api.sendMessage("Khud k0o KYa LeGend SmJhTi Hai 😂", threadID);
+   if ((event.body.toLowerCase() == "Kemon aco") || (event.body.toLowerCase() == "Balo aco")) {
+     return api.sendMessage(" তুমি যে ডিস্টাব কররায় কেমনে ভালা থাকতাম, একটা মনের মানুষ ও মিলাইয়া দেও না 😂", threadID);
    };
 
    if ((event.body.toLowerCase() == "morning") || (event.body.toLowerCase() == "good morning")) {
