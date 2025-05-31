@@ -1,19 +1,16 @@
 const fs = require("fs");
+const moment = require("moment-timezone"); // টাইমজোন ব্যবহারে প্রয়োজন
 
 module.exports.config = {
   name: "hourlyMessage",
   eventType: ["onSchedule"],
-  version: "1.0.0",
+  version: "1.0.1",
   credits: "Rakib Ali",
-  description: "Send hourly Islamic or motivational messages",
+  description: "প্রতি ঘণ্টায় ইসলামী বা মোটিভেশনাল বার্তা পাঠায়",
   schedule: {
-    interval: 3600000  // প্রতি ঘণ্টায় (3600000 মিলিসেকেন্ড)
+    interval: 3600000 // প্রতি ১ ঘণ্টায় একবার (৩,৬০০,০০০ মিলিসেকেন্ড)
   }
 };
-
-module.exports.run = async function ({ api }) {
-  const threadIDs = global.data.allThreadID || []; // সব গ্রুপ/থ্রেড আইডি
-
   const messages = [
 `‎╭•┄┅═══❁🪷❁═══┅┄•╮
 𝐓𝐢𝐦𝐞: {time}
