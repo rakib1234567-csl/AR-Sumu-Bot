@@ -49,20 +49,13 @@ var callback = () => api.sendMessage({body:` ╾━═(🇮 𝐎𝐖𝐍𝐄𝐑
 ♥️ 𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫 ♥️  
 ☞︎︎︎ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ☜︎︎︎ ✰
 
-✅ 𝐓𝐡𝐚𝐧𝐤𝐬 𝐟𝐨𝐫 𝐮𝐬𝐢𝐧𝐠 𝐀𝐑 ✦𝐁𝐨𝐭✦ 🖤
-
-🥳UPTIME🥳
-
-🌪️Today is🌪️ ☞︎︎︎☜︎︎︎✰ ${juswa} 
-
-⚡Bot is running⚡ ${hours}:${minutes}:${seconds}.
-
-✅Thanks for using ${global.config.BOTNAME} Bot🖤
+✅ 𝐓𝐡𝐚𝐧𝐤𝐬 𝐟𝐨𝐫 𝐮𝐬𝐢𝐧𝐠 𝐀𝐑 𝐒𝐮𝐦𝐮✦𝐁𝐨𝐭✦ 🖤
 
 🦢•••❍┼❍ωɳɜɽ ɳaʍɜ •••💞  
 ┏━🕊️━°❀•°:🎀:°•❀°━💞━┓  
 🌸✦✧ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ✧✦🌸  
 ┗━🕊️━°❀•°:🎀:°•❀°━💞━┛
+
 
 `,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/juswa.jpg")).on("close",() => callback());
