@@ -75,7 +75,6 @@
     "lyrics-finder": "^21.7.0",
     "mal-scraper": "^2.11.4",
     "minimist": "^1.2.6",
-    "moment-timezone": "^0.5.37",
     "movie-info": "^2.0.5",
     "ms": "^2.1.3",
     "nhentai-api": "^3.4.3",
