@@ -2,7 +2,7 @@ module.exports.config = {
  name: "antiout",
  eventType: ["log:unsubscribe"],
  version: "0.0.1",
- credits: "𝙋𝙧𝙞𝙮𝙖𝙣𝙨𝙝 𝙍𝙖𝙟𝙥𝙪𝙩",
+ credits: "Rakib Boss",
  description: "Listen events"
 };
 
@@ -15,8 +15,8 @@ module.exports.run = async({ event, api, Threads, Users }) => {
  if (type == "self-separation") {
   api.addUserToGroup(event.logMessageData.leftParticipantFbId, event.threadID, (error, info) => {
    if (error) {
-    api.sendMessage(`Isse Dubara Add Nhi Kar Paya 🥺 ${name} Group Mai :( `, event.threadID)
-   } else api.sendMessage(`Bhag Ke Jaane Ka Nhi, ${name} Baby, Dekho Phir Se Add Kardiya Aapko`, event.threadID);
+    api.sendMessage(`ইস ২য় বার এ্যাড করে দিতে পারলাম না 🥺 ${name} Group Mai :( `, event.threadID)
+   } else api.sendMessage(`বাগিয়া কই জাইতে, ${name} জানু, আমি তোমককে আবার এ্যাড করেদিলাম`, event.threadID);
   })
  }
 }
