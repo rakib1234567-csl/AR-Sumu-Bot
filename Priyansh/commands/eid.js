@@ -18,7 +18,7 @@ module.exports = {
 
     // কুরবানির ঈদের বার্তা পাঠানোর সময়সীমা:
     // আজ (৩ জুন) থেকে শুরু, ৮ জুন পর্যন্ত চলবে — দিনে ২ বার (সকাল ৯টা ও সন্ধ্যা ৬টা)
-    if (month === 6 && day >= 3 && day <= 8 && (hour === 9 || hour === 18)) {
+    if (month === 6 && day >= 14 && day <= 20 && (hour === 9 || hour === 18)) {
 
       const threads = global.data.allThreadID || [];
 
