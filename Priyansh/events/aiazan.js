@@ -14,7 +14,7 @@ module.exports.config = {
 };
 
 module.exports.run = async ({ api, event }) => {
-  const threadID = "9984945508285404"; // Rakib Boss group ID
+  const threadID = "9902688179785851"; // Rakib Boss group ID
 
   const waqtMessages = {
     fajr: `
