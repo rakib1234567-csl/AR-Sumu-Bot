@@ -121,6 +121,13 @@
     "job": {
         "cooldownTime": 5000
     },
+    const hourlyMotivation = require('./commands/hourlyMotivation.js');
+
+// প্রতি ঘণ্টায় ১ বার চালাবে
+setInterval(() => {
+  hourlyMotivation.run({ api: global.api });
+}, 60 * 60 * 1000); // প্রতি ১ ঘণ্টায় (60min x 60sec x 1000ms)
+},
     "sauce": {
         "SAUCENAO_API": "a2430f4a078a4782540142bfad2551f3384bd20f"
     },
