@@ -16,7 +16,6 @@ module.exports = {
     for (const user of addedParticipants) {
       const userName = user.fullName;
       const totalMembers = threadInfo.participantIDs.length;
-
       const welcomeMessage = 
 `╭•┄┅══❁🌺❁══┅┄•╮
    -আসসালামু আলাইকুম-
