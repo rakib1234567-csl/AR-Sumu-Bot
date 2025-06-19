@@ -31,47 +31,65 @@ module.exports.run = async function({ api, event }) {
     if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
         api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? " " : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
         const fs = require("fs");
-        return api.sendMessage("", event.threadID, () => api.sendMessage({body: `🍒💙•••Ɓ❍ʈ Ƈøɳɳɛƈʈɛɗ•••💞🌿
-        
-🕊️🌸...Ɦɛɭɭ❍ Ɠɣus Ɱɣ Ɲɑɱɛ Is 🍒💙•••✦AR Angel 𝘽𝙤𝙩✦•••💞🌿
+        return api.sendMessage("", event.threadID, () => api.sendMessage({body: `🌺••• Ɓ❍ʈ Ƈøɳɳɛƈʈɛɗ •••🌺
 
+       🌸 Ɦɛɭɭ❍ Ɠɣus 🌸
+     🌻 Ɱɣ Ɲɑɱɛ 𝐈𝐬 🌻
+       ✦★ 𝐀𝐑 Ramisha ★✦
 
+╭•┄┅══❁🌻❁══┅┄•╮
+     ✪ 𝐏𝐫𝐞𝐟𝐢𝐱 𝐈𝐧𝐟𝐨 ✪
+╰•┄┅══❁🌻❁══┅┄•╯
 
+✦ 𝐌𝐲 𝐏𝐫𝐞𝐟𝐢𝐱: [ - ]
 
- ✨💞Ɱɣ Ꭾɽɛfɪᵡ ɪs / 
+✦ 𝐒𝐭𝐚𝐭𝐮𝐬: ⧫ Online & Active ⧫
 
+📢 প্রিয় ভাই-বোন, কমান্ড দেওয়ার আগে দয়া করে Prefix [ - ] দিন।
 
-\n\nƬɣƥɛ${global.config.PREFIX}ꞪɛɭᎮ Ƭ❍ søø Ɱɣ Ƈøɱɱɑɳɗ ɭɪsʈ...🤍💫\n
-\nƐxɑɱƥɭɛ :\n
+📎 উদাহরণ: -help, -menu, -song
 
-${global.config.PREFIX}Sɧɑɣɽɪ..💜(Ƭɛxʈ)\n${global.config.PREFIX} (Ƥɧøʈø)🌬️🌳🌊
+❓ প্রশ্ন থাকলে এডমিনের সাথে যোগাযোগ করুন।
 
-🦋🌸Ƭɣƥɛ${global.config.PREFIX}Ɦɛɭƥ2 (Ɑɭɭ Ƈøɱɱɑɳɗʂ)...☃️💌
-
-${global.config.PREFIX} ɪɳfø (ɑɗɱɪɳ Iɳføɽɱɑʈɪøɳ)👀✍️
-...🍫🥀Ɱɣ ❍wɳɛɽ ɪs Ɱɽ Rakib Ali...🕊️☃️
-
-${global.config.PREFIX}🌺🍃Ƈɑɭɭɑɗ føɽ Ɑɳɣ ɪʂʂuɛ 
 <<<<<------------------------------>>>>>
-A̸N̸D̸ F̸O̸R̸ A̸N̸Y̸ R̸E̸P̸O̸R̸T̸ O̸R̸ C̸O̸N̸T̸A̸C̸T̸ B̸O̸T̸ D̸E̸V̸A̸L̸O̸P̸A̸R̸....💙🍫
 
-💝🥀𝐎𝐖𝐍𝐄𝐑:- ☞Rakib Ali☜ 💫\n🖤𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 Rakib 🖤\n😳𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝🤓:- ☞ https://www.facebook.com/profile.php?id=100044487340424\n
-👋For Any Kind Of Help Contact On Whatsapp   👉 https://wa.me/8801601150660😇 
+A̸N̸D̸ F̸O̸R̸ A̸N̸Y̸ 𝐑𝐄𝐏𝐎𝐑𝐓 ⧫ 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐁𝐎𝐓 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 💙🍫
 
+━═(🪪 𝐎𝐖𝐍𝐄𝐑 𝐈𝐍𝐅𝐎)═━
+
+☄️ 𝐁𝐎𝐓 𝐀𝐃𝐌𝐈𝐍 ☄️  
+❖★ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ★❖
+
+🙈 𝐎𝐰𝐧𝐞𝐫 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 🙈  
+🔗 [Click Here](https://www.facebook.com/profile.php?id=100044487340424) 💞🕊️
+
+📞 WhatsApp: +8801616-092343  
+✉️ Email: rakib.ali.csl@gmail.com  
+📱 Mobile: +8801616-092343
+
+✧═══•❁❀❁•═══✧
+
+❤️ 𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫  
+☞︎︎︎ ★ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ★ ☜︎︎︎
+
+✅ ধন্যবাদ ✦𝐀𝐑 Ramisha✦ ব্যবহার করার জন্য 🖤
 
 ✮☸✮
-✮┼💞┼✮
-☸🕊️━━•🌸•━━🕊️☸
+✮┼ 💞 ┼✮
+☸🕊️━━• 🌸 •━━🕊️☸
 ✮☸✮
-✮┼🍫┼✮
-☸🎀━━•🧸•━━🎀☸
-✮┼🦢┼✮
+✮┼ 🍫 ┼✮
+☸🎀━━• 🧸 •━━🎀☸
+✮┼ 🦢 ┼✮
 ✮☸✮
-☸🌈━━•🤍•━━🌈☸
+☸🌈━━• 🤍 •━━🌈☸
 ✮☸✮
-✮┼❄️┼✮
+✮┼ ❄️ ┼✮
 
-┏━🕊️━━°❀•🎀•❀°━━💞━┓🌸✦✧✧✧✰🍒Rakib🌿✰✧✧✧✦🌸  ┗━🕊️━━°❀•🎀•❀°━━💞━┛
+     ░▒▓█ Creator By █▓▒░  
+┏━🕊️-❀-°:🎀:°-❀-💞━┓  
+     🌸✦ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ✦🌸  
+┗━🕊️-❀-°:🎀:°-❀-💞━┛
 `, attachment: fs.createReadStream(__dirname + "/cache/botjoin.mp4")} ,threadID));
     }
     else {
