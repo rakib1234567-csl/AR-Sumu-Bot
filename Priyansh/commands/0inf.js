@@ -25,23 +25,41 @@ const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【HH:mm:ss】");
 var link =                                     
 ["https://i.imghippo.com/files/lJ8376Tkc.jpg"];
-var callback = () => api.sendMessage({body:` ╾━╤デ╦︻(▀̿Ĺ̯▀̿ ̿)🇮 𝐀𝐃𝐌𝐈𝐍 𝐀𝐍𝐃 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 🇮 
-(⌐▀͡ ̯ʖ▀)︻̷┻̿═━一-
+var callback = () => api.sendMessage({body:` ━═(🪪 𝐎𝐖𝐍𝐄𝐑 𝐈𝐍𝐅𝐎)═━
 
-☄️Bot Name︎︎︎☄️  ${global.config.BOTNAME}
+☄️ 𝐁𝐎𝐓 𝐀𝐃𝐌𝐈𝐍 ☄️  
+❖★ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ★❖
 
-🔥Bot Admin🔥☞︎︎︎☜︎︎︎✰ RAKIB💔🥀
+🙈 𝐎𝐰𝐧𝐞𝐫 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 🙈  
+🔗 [Click Here](https://www.facebook.com/profile.php?id=100044487340424) 💞🕊️
 
-🙈bot andmin owner facebook id link🙈➪ www.facebook.com/rakib.mobile.01601150650 💞🕊️
+📞 WhatsApp: +8801616-092343  
+✉️ Email: rakib.ali.csl@gmail.com  
+📱 Mobile: +8801616-092343
 
-👋For Any Kind Of Help Contact On Telegram  Username 👉 @Rakib Ali😇
+✧═══•❁❀❁•═══✧
 
-✧══════•❁❀❁•══════✧
+❤️ 𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫  
+☞︎︎︎ ★ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ★ ☜︎︎︎
 
-🌸Bot Prefix🌸☞︎︎︎☜︎︎︎✰ ${global.config.PREFIX}
+✅ ধন্যবাদ ✦𝐀𝐑 Ramisha✦ ব্যবহার করার জন্য 🖤
 
-♥️Bot Owner♥️ ☞︎︎︎☜︎︎︎✰ Rakib Boss𝐭
+✮☸✮
+✮┼ 💞 ┼✮
+☸🕊️━━• 🌸 •━━🕊️☸
+✮☸✮
+✮┼ 🍫 ┼✮
+☸🎀━━• 🧸 •━━🎀☸
+✮┼ 🦢 ┼✮
+✮☸✮
+☸🌈━━• 🤍 •━━🌈☸
+✮☸✮
+✮┼ ❄️ ┼✮
 
+     ░▒▓█ Creator By █▓▒░  
+┏━🕊️-❀-°:🎀:°-❀-💞━┓  
+     🌸✦ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ✦🌸  
+┗━🕊️-❀-°:🎀:°-❀-💞━┛
 🥳UPTIME🥳
 
 🌪️Today is🌪️ ☞︎︎︎☜︎︎︎✰ ${juswa} 
