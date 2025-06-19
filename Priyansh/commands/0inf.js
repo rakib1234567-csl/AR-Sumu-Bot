@@ -44,6 +44,14 @@ var callback = () => api.sendMessage({body:` ━═(🪪 𝐎𝐖𝐍𝐄𝐑 �
 
 ✅ ধন্যবাদ ✦𝐀𝐑 Ramisha✦ ব্যবহার করার জন্য 🖤
 
+🥳UPTIME🥳
+
+🌪️Today is🌪️ ☞︎︎︎☜︎︎︎✰ ${juswa} 
+
+⚡Bot is running⚡ ${hours}:${minutes}:${seconds}.
+
+✅Thanks for using ${global.config.BOTNAME} Bot🖤
+
 ✮☸✮
 ✮┼ 💞 ┼✮
 ☸🕊️━━• 🌸 •━━🕊️☸
@@ -56,25 +64,10 @@ var callback = () => api.sendMessage({body:` ━═(🪪 𝐎𝐖𝐍𝐄𝐑 �
 ✮☸✮
 ✮┼ ❄️ ┼✮
 
-     ░▒▓█ Creator By █▓▒░  
+░▒▓█ Creator By █▓▒░  
 ┏━🕊️-❀-°:🎀:°-❀-💞━┓  
-     🌸✦ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ✦🌸  
+  🌸✦ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ✦🌸  
 ┗━🕊️-❀-°:🎀:°-❀-💞━┛
-🥳UPTIME🥳
-
-🌪️Today is🌪️ ☞︎︎︎☜︎︎︎✰ ${juswa} 
-
-⚡Bot is running⚡ ${hours}:${minutes}:${seconds}.
-
-✅Thanks for using ${global.config.BOTNAME} Bot🖤
-
-
-🦢🍒•••ꞪɛᏒɛ ɪʂ ɮ❍┼ ❍ωɳɜɽ ɳaʍɜ•••🌷💞
-┏━🕊️━━°❀•°🎀°•❀°━━💞━┓
-🌸✦✧✰🍒RAKIB BOSS🌿✰✧✦🌸
-┗━🕊️━━°❀•°🎀°•❀°━━💞━┛
-
-
 `,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/juswa.jpg")).on("close",() => callback());
    };
