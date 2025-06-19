@@ -25,9 +25,29 @@ module.exports.handleEvent = async ({ event, api, Threads }) => {
     if (body === i.toUpperCase() | body === i | str === body) {
 const prefix = threadSetting.PREFIX || global.config.PREFIX;
       if (data.PREFIX == null) {
-        return out(`This Is My Prefix ⇉ [ ${prefix} ]\n💝🥀༻𝐎𝐖𝐍𝐄𝐑:- ☞Rakib Boss☜ ༺ ༒𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 〠rakib〠.༒ ༒𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝༒:- ☞ www.facebook.com/profile.php?id=100037743553224 ☜ ֎𝘍𝘰𝘳 𝘈𝘯𝘺 𝘒𝘪𝘯𝘥 𝘖𝘧 𝘏𝘦𝘭𝘱 :- https://t.me/rakib.ali☜`)
+        return out(`╭•┄┅══❁🌻❁══┅┄•╮  
+ ✪ 𝓟𝓻𝓮𝓯𝓲𝔁 𝓘𝓷𝓯𝓸𝓻𝓶𝓪𝓽𝓲𝓸𝓷 ✪  
+╰•┄┅══❁🌻❁══┅┄•╯  
+
+✦ 𝓝𝓪𝓶𝓮: 𝐀𝐑 𝐑𝐚𝐦𝐢𝐬𝐡𝐚  
+✦ 𝓞𝔀𝓷𝓮𝓻: 𝓡𝓐𝓚𝓘𝓑 𝓑𝓞𝓢𝓢  
+✦ 𝓟𝓻𝓮𝓯𝓲𝔁:  [ ${prefix} ]  
+✦ 𝓢𝓽𝓪𝓽𝓾𝓼: 🟢 𝓞𝓷𝓵𝓲𝓷𝓮 & 𝓐𝓬𝓽𝓲𝓿𝓮  
+✦ 𝓒𝓸𝓷𝓽𝓪𝓬𝓽:  
+  https://www.facebook.com/profile.php?id=100044487340424  
+
+➤ প্রিয় ভাই-বোন, আগে [ ${prefix} ] এই প্রিফিক্স ব্যবহার করে তারপর কমান্ড দিন।
+
+☞ কোনো প্রশ্ন থাকলে এডমিনের সঙ্গে যোগাযোগ করুন।
+
+☞ উদাহরণ: ${prefix}help, ${prefix}menu, ${prefix}info
+
+╭•┄┅══❁🪷❁══┅┄•╮  
+✪ আমাকে ব্যবহারের জন্য ✪  
+  ✪ - ধন্যবাদ - ✪  
+╰•┄┅══❁🪷❁══┅┄•╯`)
       }
-      else return out('️️️️️️️️️️️️️️️️️️️️️️️️️️️This Is My Prefix ⇉ [ ${prefix} ]  \n💝༻𝐎𝐖𝐍𝐄𝐑:- ☞Rakib Boss☜ ༺ ༒𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 〠rakib〠.༒ ༒𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝༒:- ☞ www.facebook.com/profile.php?id=100037743553224 ☜ ֎𝘍𝘰𝘳 𝘈𝘯𝘺 𝘒𝘪𝘯𝘥 𝘖𝘧 𝘏𝘦𝘭𝘱 :- https://t.me/rakib.ali☜' + data.PREFIX)
+      else return out('️️️️️️️️️️️️️️️️️️️️️️️️️️️╭•┄┅══❁🌻❁══┅┄•╮ \n✪ 𝓟𝓻𝓮𝓯𝓲𝔁 𝓘𝓷𝓯𝓸𝓻𝓶𝓪𝓽𝓲𝓸𝓷 ✪  \n╰•┄┅══❁🌻❁══┅┄•╯  \n✦ 𝓝𝓪𝓶𝓮: 𝐀𝐑 𝐑𝐚𝐦𝐢𝐬𝐡𝐚  \n✦ 𝓞𝔀𝓷𝓮𝓻: 𝓡𝓐𝓚𝓘𝓑 𝓑𝓞𝓢𝓢  \n✦ 𝓟𝓻𝓮𝓯𝓲𝔁:  [ ${prefix} ]  \n✦ 𝓢𝓽𝓪𝓽𝓾𝓼: 🟢 𝓞𝓷𝓵𝓲𝓷𝓮 & 𝓐𝓬𝓽𝓲𝓿𝓮  \n✦ 𝓒𝓸𝓷𝓽𝓪𝓬𝓽:  \n  https://www.facebook.com/profile.php?id=100044487340424  \n➤ প্রিয় ভাই-বোন, আগে [ ${prefix} ] এই প্রিফিক্স ব্যবহার করে তারপর কমান্ড দিন।\n ☞ কোনো প্রশ্ন থাকলে এডমিনের সঙ্গে যোগাযোগ করুন। \n☞ উদাহরণ: ${prefix}help, ${prefix}menu, ${prefix}info  \n╭•┄┅══❁🪷❁══┅┄•╮  \n✪ আমাকে ব্যবহারের জন্য ✪  \n   ✪ - ধন্যবাদ - ✪  \n╰•┄┅══❁🪷❁══┅┄•╯' + data.PREFIX)
     }
 
   });
